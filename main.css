@@ -1,0 +1,89 @@
+html, body {
+  font-family: Tahoma;
+  color: #444;
+  letter-spacing: 1px; }
+
+* {
+  margin: 0; }
+
+h1, h2, h3 {
+  font-weight: normal; }
+
+h1, h3 {
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); }
+
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 20px auto;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  padding: 0 0 20px;
+  overflow: hidden;
+  border: 1px solid lightgrey; }
+
+.header {
+  background: #b1b1d3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 30px 0; }
+  .header h3 {
+    margin: 15px 0; }
+  .header input {
+    padding: 5px;
+    border-radius: 5px;
+    width: 60%; }
+
+.listContainer h2 {
+  padding: 10px 20px; }
+
+.listContainer ul li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 10px 10px 0;
+  -webkit-transition: 130ms;
+  -o-transition: 130ms;
+  transition: 130ms;
+  -webkit-transition-property: background, text-shadow, -webkit-box-shadow;
+  transition-property: background, text-shadow, -webkit-box-shadow;
+  -o-transition-property: background, box-shadow, text-shadow;
+  transition-property: background, box-shadow, text-shadow;
+  transition-property: background, box-shadow, text-shadow, -webkit-box-shadow; }
+  .listContainer ul li::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.1);
+    width: 10px; }
+  .listContainer ul li:hover {
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
+    .listContainer ul li:hover .delete {
+      background: #b1b1d3;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); }
+    .listContainer ul li:hover::before {
+      background: #b1b1d3; }
+  .listContainer ul li span {
+    display: inline-block;
+    padding: 18px; }
+  .listContainer ul li .name {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0; }
+  .listContainer ul li .delete {
+    background: #c8ccd3;
+    color: white; }
