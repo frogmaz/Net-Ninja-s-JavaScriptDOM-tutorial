@@ -1,3 +1,7 @@
+$bojaTeme : #b1b1d3;
+$bledaSiva: rgba(255,255,255,.6);
+
+
 html, body{
   font-family: Tahoma;
   color: #444;
@@ -25,18 +29,17 @@ h1,h3{
 // * * * * * * * * { outline: 1px solid blue }
 
 .container{
-  width: 90%;
+  width: 70%;
   max-width: 960px;
-  margin: 20px auto;
+  margin: 50px auto;
   border-radius: 6px;
   box-shadow: 0 1px 6px rgba(0,0,0,.5);
-  padding: 0 0 20px;
   overflow: hidden;
   border: 1px solid lightgrey;
 }
 
 .header{
-  background: #b1b1d3;
+  background: $bojaTeme;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,8 +59,9 @@ h1,h3{
     padding: 10px 20px;
   }
   ul{
-
+    margin-bottom: 20px;
     li{
+      max-width: 95%;
       list-style: none;
       display: flex;
       box-shadow: 0 1px 4px rgba(0,0,0,.2);
@@ -74,11 +78,11 @@ h1,h3{
       &:hover{
         box-shadow: 0 2px 5px rgba(0,0,0,.2);
         .delete{
-          background: #b1b1d3;
+          background: $bojaTeme;
           text-shadow: 1px 1px 4px rgba(0,0,0,.5);
         }
         &::before{
-          background: #b1b1d3;
+          background: $bojaTeme;
         }
       }
 
@@ -98,6 +102,56 @@ h1,h3{
   }
 }
 
-.footer{
-
+#addNote{
+  display: flex;
+  background: $bojaTeme;
+  justify-content: center;
+  div{
+    position: relative;
+    left: 5px;
+    width: 89%;
+    margin: 22px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background: lightgrey;
+    box-shadow: 0 1px 5px rgba(255,255,255,.8);
+    input, button{
+      flex: 1 1 0;
+      padding: 16px;
+      border: none;
+    }
+    div{
+      width: 10px;
+      background-color: transparent;
+      box-shadow: none;
+    }
+    input{
+      background-color: $bojaTeme;
+      text-align: right;
+      color: white;
+      font-size: 18px;
+      text-shadow: 1px 1px grey;
+      &::placeholder{
+        color: white;
+        font-size: 18px;
+      }
+      &:focus{
+        outline: none;
+      }
+    }
+    button{
+      max-width: 85px;
+      font-weight: bolder;
+      color: grey;
+    }
+    &:hover{
+      box-shadow: 0 2px 7px rgba(255,255,255,.8);
+      background: white;
+      button{
+        background: white;
+      }
+    }
+  }
 }
