@@ -98,60 +98,71 @@ h1, h3 {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  #addNote div {
-    position: relative;
-    left: 5px;
-    width: 89%;
-    margin: 22px 0;
+  #addNote li {
+    list-style: none;
+    margin: 22px 35px 22px 0;
     border-radius: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     overflow: hidden;
     background: lightgrey;
     -webkit-box-shadow: 0 1px 5px rgba(255, 255, 255, 0.8);
-    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.8); }
-    #addNote div input, #addNote div button {
-      -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-      flex: 1 1 0;
-      padding: 16px;
+    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.8);
+    -webkit-transition: 130ms;
+    -o-transition: 130ms;
+    transition: 130ms;
+    -webkit-transition-property: background,-webkit-box-shadow;
+    transition-property: background,-webkit-box-shadow;
+    -o-transition-property: box-shadow,background;
+    transition-property: box-shadow,background;
+    transition-property: box-shadow,background,-webkit-box-shadow; }
+    #addNote li input, #addNote li button {
+      padding: 18px;
       border: none; }
-    #addNote div div {
+    #addNote li div {
       width: 10px;
       background-color: transparent;
       -webkit-box-shadow: none;
       box-shadow: none; }
-    #addNote div input {
+    #addNote li input {
       background-color: #b1b1d3;
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+      flex: 1 1 0;
       text-align: right;
       color: white;
       font-size: 18px;
       text-shadow: 1px 1px grey; }
-      #addNote div input::-webkit-input-placeholder {
+      #addNote li input::-webkit-input-placeholder {
         color: white;
         font-size: 18px; }
-      #addNote div input:-ms-input-placeholder {
+      #addNote li input:-ms-input-placeholder {
         color: white;
         font-size: 18px; }
-      #addNote div input::-ms-input-placeholder {
+      #addNote li input::-ms-input-placeholder {
         color: white;
         font-size: 18px; }
-      #addNote div input::placeholder {
+      #addNote li input::placeholder {
         color: white;
         font-size: 18px; }
-      #addNote div input:focus {
+      #addNote li input:focus {
         outline: none; }
-    #addNote div button {
+    #addNote li button {
       max-width: 85px;
+      margin-right: 5px;
       font-weight: bolder;
+      background: transparent;
       color: grey; }
-    #addNote div:hover {
+    #addNote li:hover {
       -webkit-box-shadow: 0 2px 7px rgba(255, 255, 255, 0.8);
       box-shadow: 0 2px 7px rgba(255, 255, 255, 0.8);
       background: white; }
-      #addNote div:hover button {
+      #addNote li:hover button {
         background: white; }
