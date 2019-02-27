@@ -1,25 +1,12 @@
+const listContainer = document.querySelector('#listContainer');
 
-// selektovanje svog sadrzaja za postavljenom "adresom" u zagradi
-// da sam koristio querySelector (bez All) uzeo bi samo prvi element sa ove adrese
-var cards = document.querySelectorAll("#listContainer li .name");
-console.log(cards);
+console.log('the parent node is:', listContainer.parentNode);
+console.log('the parent element is:', listContainer.parentElement);
+//every element is a node, but not every node is an element
+console.log('the parent\'s parent element is:', listContainer.parentElement.parentElement);
 
-//dodavanje tekstualnog HTML sadrzaja
-cards.forEach(function(card){
-  card.textContent += " (jest, jest)";
-})
-
-//dodavanje celog HTML elementa
-const cardList = document.querySelector('#listContainer ul');
-cardList.innerHTML += "<p> NEMA NITA </p>";
-
-//čvorovi unutar DOM-a
-const container = document.querySelector("#container");
-console.log(container.nodeType); //tip, odnosno nivo, čvora
-console.log(container.nodeName); //pod kojim imenom html elementa stoji ovaj čvor
-console.log(container.hasChildNodes()); //sadrži ili ne sadrži podelemente
-
-// kopiranje kontejnera
-// u zagradi TRUE da bi se kopirao CEO čvor sa svim svojim podelementima
-const clonedContainer = container.cloneNode(true);
-console.log(clonedContainer);
+console.log('Children nodes:', listContainer.childNodes);
+// text here is a line break
+// so in order to grab just the elements (not nodes) do it like this:
+console.log('Children elements:', listContainer.children);
+// but this way you get  HTML Collection instead of Node list (so you have to convert it to Array if you want to use Array functions)
