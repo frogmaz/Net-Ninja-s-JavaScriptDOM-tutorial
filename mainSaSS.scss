@@ -28,24 +28,24 @@ h1,h3{
 // * * * * * * * { outline: 1px solid orange }
 // * * * * * * * * { outline: 1px solid blue }
 
-.container{
-  width: 70%;
+#container{
+  width: 90%;
   max-width: 960px;
-  margin: 50px auto;
+  margin: 15px auto;
   border-radius: 6px;
   box-shadow: 0 1px 6px rgba(0,0,0,.5);
   overflow: hidden;
   border: 1px solid lightgrey;
 }
 
-.header{
+#header{
   background: $bojaTeme;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px 0;
   h3{
-    margin: 15px 0;
+    margin: 10px 0;
   }
   input{
     padding: 5px;
@@ -54,9 +54,9 @@ h1,h3{
   }
 }
 
-.listContainer{
+#listContainer{
   h2{
-    padding: 10px 20px;
+    padding: 8px 20px;
   }
   ul{
     margin-bottom: 20px;
