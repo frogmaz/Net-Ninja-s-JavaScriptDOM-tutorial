@@ -96,7 +96,13 @@ h1,h3{
       .delete{
         background: #c8ccd3;
         color: white;
-
+        &:focus{
+          outline: none;
+        }
+        &:hover{
+          background: grey;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -146,6 +152,9 @@ h1,h3{
       font-weight: bolder;
       background: transparent;
       color: grey;
+      &:focus{
+        outline: none;
+      }
     }
     transition: 130ms;
     transition-property: box-shadow,background;
@@ -153,7 +162,7 @@ h1,h3{
       box-shadow: 0 2px 7px rgba(255,255,255,.8);
       background: white;
       button{
-        background: white;
+        cursor: pointer;
       }
     }
   }

@@ -89,6 +89,11 @@ h1, h3 {
     #listContainer ul li .delete {
       background: #c8ccd3;
       color: white; }
+      #listContainer ul li .delete:focus {
+        outline: none; }
+      #listContainer ul li .delete:hover {
+        background: grey;
+        cursor: pointer; }
 
 #addNote {
   display: -webkit-box;
@@ -160,9 +165,11 @@ h1, h3 {
       font-weight: bolder;
       background: transparent;
       color: grey; }
+      #addNote li button:focus {
+        outline: none; }
     #addNote li:hover {
       -webkit-box-shadow: 0 2px 7px rgba(255, 255, 255, 0.8);
       box-shadow: 0 2px 7px rgba(255, 255, 255, 0.8);
       background: white; }
       #addNote li:hover button {
-        background: white; }
+        cursor: pointer; }

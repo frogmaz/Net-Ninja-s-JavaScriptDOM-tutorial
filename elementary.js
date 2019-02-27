@@ -1,12 +1,13 @@
-const listContainer = document.querySelector('#listContainer');
+var btns = document.querySelectorAll('#listContainer .delete');
+//sa All selektorom prikupljam svu dugmad u html kolekciju
+btns.forEach(function(btn){
+  //u kolekciji svakom dugmetu dodajem po "osluškivač klika" za koji je prikačena funkcija
+  btn.addEventListener('click', function(){ //klik je okidač funkcije
+    const li = this.parentElement;  //"this" upućuje čvor koji je trenutno predstavljen "btn" imenom (jedan od dugmića s klasom ".delete") i u odnosu na čiju poziciju se nalazi nadelement
+    //lokacija nadelementa se čuva u konstanti "li"
+    li.parentElement.removeChild(li);
+    //pošto brisanje može da se radi samo iz nadelementa, moramo naći nadelement lokacije koja se čuva u konstanti "li" da bismo obrisali njegov podelement
+  })
+})
 
-console.log('the parent node is:', listContainer.parentNode);
-console.log('the parent element is:', listContainer.parentElement);
-//every element is a node, but not every node is an element
-console.log('the parent\'s parent element is:', listContainer.parentElement.parentElement);
-
-console.log('Children nodes:', listContainer.childNodes);
-// text here is a line break
-// so in order to grab just the elements (not nodes) do it like this:
-console.log('Children elements:', listContainer.children);
-// but this way you get  HTML Collection instead of Node list (so you have to convert it to Array if you want to use Array functions)
+console.log(btns);
