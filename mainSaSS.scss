@@ -117,6 +117,7 @@ h1,h3{
 }
 
 #addNote{
+  position: relative;
   display: flex;
   flex-direction: column;
   background: $bojaTeme;
@@ -179,5 +180,27 @@ h1,h3{
         cursor: pointer;
       }
     }
+  }
+  span{
+    position: absolute;
+    top: 8px;
+    right: 45px;
+    padding: 4px;
+    color: white;
+    background: grey;
+    border-radius: 5px;
+    transition: 200ms;
+    transition-property: opacity;
+    opacity: 0;
+    &::after{
+      position: absolute;
+      content: '';
+      bottom: -20px;
+      right: 10%;
+      border-width: 10px;
+      border-style: solid;
+      border-color: grey transparent transparent transparent;
+    }
+
   }
 }

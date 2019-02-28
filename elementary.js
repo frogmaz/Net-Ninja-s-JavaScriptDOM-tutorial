@@ -16,6 +16,16 @@ dodajStavku.addEventListener('submit',function(e){
   const upis = dodajStavku.querySelector('input[type="text"]').value;
   console.log(upis);
 
+  //empty notes not allowed
+  if(upis == ''){
+    const obavestenje = document.querySelector('#popup');
+    obavestenje.style.opacity = '1';
+    return;
+  }else{
+    const obavestenje = document.querySelector('#popup');
+    obavestenje.style.opacity = '0';
+  }
+
   //create elements
   const li =document.createElement('li');
   const liName =document.createElement('span');
@@ -49,3 +59,19 @@ skrijListu.addEventListener('change',function(e){
     omotStavki.style.maxHeight = "260px";
   }
 });
+
+//custom search filter
+const pretraga = document.forms['search'].querySelector('input');
+
+pretraga.addEventListener('keyup',function(e){
+  const trag = e.target.value.toLowerCase();
+  const stavke = omotStavki.getElementsByTagName('li');
+  Array.from(stavke).forEach(function(stavka){
+    const sadrzaj = stavka.firstElementChild.textContent;
+    if(sadrzaj.toLowerCase().includes(trag)){
+      stavka.style.display = 'flex';
+    } else {
+      stavka.style.display = 'none';
+    }
+  })
+})
