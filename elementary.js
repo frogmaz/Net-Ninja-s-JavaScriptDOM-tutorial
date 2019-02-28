@@ -25,6 +25,10 @@ dodajStavku.addEventListener('submit',function(e){
   deleteBtn.textContent = 'Бриши';
   liName.textContent = upis;
 
+  //add classes
+  liName.classList.add('name');
+  deleteBtn.classList.add('delete');
+
   //append to document
   li.appendChild(liName);
   li.appendChild(deleteBtn);
