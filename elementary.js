@@ -1,10 +1,33 @@
-//sa All selektorom prikupljam svu dugmad u html kolekciju
-var btns = document.querySelectorAll('#listContainer .delete');
-//u kolekciji svakom dugmetu dodajem po "osluškivač klika" za koji je prikačena funkcija
-btns.forEach(function(btn){
-  btn.addEventListener('click', function(){ //klik je okidač funkcije
-    this.parentElement.remove(); //jednostavnije
-  })
+const omotStavki =document.querySelector('#listContainer ul');
+//delete cards
+omotStavki.addEventListener('click', function(e){
+  if(e.target.className == 'delete'){
+    const li = e.target.parentElement;
+    li.parentElement.removeChild(li);
+  }
 })
 
-console.log(btns);
+//add cards
+const dodajStavku = document.forms['addNote'];
+
+dodajStavku.addEventListener('submit',function(e){
+  e.preventDefault();
+  const upis = dodajStavku.querySelector('input[type="text"]').value;
+  console.log(upis);
+
+
+  //create elements
+  const li =document.createElement('li');
+  const liName =document.createElement('span');
+  const deleteBtn =document.createElement('span');
+
+  //add content
+  deleteBtn.textContent = 'Бриши';
+  liName.textContent = upis;
+
+  //append to document
+  li.appendChild(liName);
+  li.appendChild(deleteBtn);
+  omotStavki.appendChild(li);
+
+})
