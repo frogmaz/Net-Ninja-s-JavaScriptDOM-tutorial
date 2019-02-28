@@ -20,8 +20,7 @@ h1, h3 {
   border-radius: 6px;
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  border: 1px solid lightgrey; }
+  overflow: hidden; }
 
 #header {
   background: #b1b1d3;
@@ -50,7 +49,16 @@ h1, h3 {
   padding: 8px 20px; }
 
 #listContainer ul {
-  margin-bottom: 20px; }
+  display: block;
+  margin-bottom: 20px;
+  max-height: 260px;
+  overflow-y: auto;
+  -webkit-transition: 200ms;
+  -o-transition: 200ms;
+  transition: 200ms;
+  -webkit-transition-property: max-height, height;
+  -o-transition-property: max-height, height;
+  transition-property: max-height, height; }
   #listContainer ul li {
     max-width: 95%;
     list-style: none;
@@ -102,10 +110,16 @@ h1, h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #b1b1d3;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #b1b1d3; }
+  #addNote #hideDiv {
+    margin: 5px 0 0 10%;
+    color: white;
+    font-size: 12px;
+    text-shadow: 1px 1px grey; }
   #addNote li {
     list-style: none;
     margin: 20px 35px 20px 40px;
@@ -114,8 +128,8 @@ h1, h3 {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-    -ms-flex: 1 1 0px;
-    flex: 1 1 0;
+    -ms-flex: 1 1 55px;
+    flex: 1 1 55px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
