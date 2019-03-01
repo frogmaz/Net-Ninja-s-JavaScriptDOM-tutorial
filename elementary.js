@@ -56,7 +56,7 @@ skrijListu.addEventListener('change',function(e){
   if(skrijListu.checked){
     omotStavki.style.maxHeight = "0";
   } else{
-    omotStavki.style.maxHeight = "260px";
+    omotStavki.style.maxHeight = "248px";
   }
 });
 
@@ -74,4 +74,27 @@ pretraga.addEventListener('keyup',function(e){
       stavka.style.display = 'none';
     }
   })
+})
+
+//tabs
+const tabs = document.querySelector('.tabs');
+const panels = document.querySelectorAll('.panel');
+
+tabs.addEventListener('click', function(e){
+  if(e.target.tagName == 'LI'){
+    const ciljniPanel = document.querySelector(e.target.dataset.cilj);
+    panels.forEach(function(panel){
+      if(panel == ciljniPanel){
+        panel.classList.add('active');
+        e.target.classList.add('active');
+      } else {
+        panel.classList.remove('active');
+        e.target.classList.remove('active');
+      }
+    })
+    tabs.querySelectorAll('li').forEach(function(li){
+      li.removeAttribute('class');
+    })
+    e.target.setAttribute('class','active');
+  }
 })

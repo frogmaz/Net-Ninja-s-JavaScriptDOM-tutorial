@@ -225,15 +225,7 @@ h1, h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: rgba(0, 0, 0, 0.6);
-  -webkit-transition: 200ms;
-  -o-transition: 200ms;
-  transition: 200ms;
-  -webkit-transition-property: top, -webkit-box-shadow;
-  transition-property: top, -webkit-box-shadow;
-  -o-transition-property: box-shadow, top;
-  transition-property: box-shadow, top;
-  transition-property: box-shadow, top, -webkit-box-shadow; }
+  color: rgba(0, 0, 0, 0.6); }
   #tabbed-content .tabs {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -254,7 +246,8 @@ h1, h3 {
       display: flex;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+      cursor: pointer; }
       #tabbed-content .tabs li.active {
         -webkit-box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.4);
         box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.4); }
@@ -288,7 +281,8 @@ h1, h3 {
     border-width: 12px;
     border-style: solid;
     border-color: transparent rgba(255, 255, 255, 0.6) transparent transparent;
-    left: -24px; }
+    left: -24px;
+    top: 3px; }
   #tabbed-content #contact::before {
     position: absolute;
     content: '';
