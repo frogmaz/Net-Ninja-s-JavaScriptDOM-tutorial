@@ -16,10 +16,10 @@ dodajStavku.addEventListener('submit',function(e){
   const upis = dodajStavku.querySelector('input[type="text"]').value;
   console.log(upis);
 
-  //empty notes not allowed
+  //empty notes not allowed POPUP
   if(upis == ''){
     const obavestenje = document.querySelector('#popup');
-    obavestenje.style.opacity = '1';
+    obavestenje.style.opacity = '0.8';
     return;
   }else{
     const obavestenje = document.querySelector('#popup');

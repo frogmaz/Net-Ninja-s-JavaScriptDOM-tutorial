@@ -1,7 +1,8 @@
 html, body {
   font-family: Tahoma;
   color: #444;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  min-width: 640px; }
 
 * {
   margin: 0; }
@@ -15,11 +16,11 @@ h1, h3 {
 
 #container {
   width: 90%;
-  max-width: 960px;
-  margin: 15px auto;
+  max-width: 760px;
+  margin: 10px auto;
   border-radius: 6px;
-  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
   overflow: hidden; }
 
 #header {
@@ -34,9 +35,9 @@ h1, h3 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 30px 0; }
+  padding: 5px 0 10px 0; }
   #header h3 {
-    margin: 10px 0; }
+    margin: 5px 0; }
   #header #search {
     width: 100%; }
   #header input {
@@ -44,14 +45,16 @@ h1, h3 {
     padding: 5px;
     border-radius: 5px;
     width: 60%; }
+    #header input:focus {
+      outline: none; }
 
 #listContainer h2 {
-  padding: 8px 20px; }
+  padding: 5px 20px; }
 
 #listContainer ul {
   display: block;
-  margin-bottom: 20px;
-  max-height: 260px;
+  margin-bottom: 10px;
+  max-height: 248px;
   overflow-y: auto;
   -webkit-transition: 200ms;
   -o-transition: 200ms;
@@ -69,7 +72,7 @@ h1, h3 {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     overflow: hidden;
-    margin: 0 10px 10px 0;
+    margin: 0 10px 7px 0;
     -webkit-transition: 130ms;
     -o-transition: 130ms;
     transition: 130ms;
@@ -123,7 +126,7 @@ h1, h3 {
     text-shadow: 1px 1px grey; }
   #addNote li {
     list-style: none;
-    margin: 20px 35px 20px 40px;
+    margin: 10px 35px 10px 40px;
     border-radius: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -197,6 +200,7 @@ h1, h3 {
     right: 45px;
     padding: 4px;
     color: white;
+    font-size: 12px;
     background: grey;
     border-radius: 5px;
     -webkit-transition: 200ms;
@@ -214,3 +218,82 @@ h1, h3 {
       border-width: 10px;
       border-style: solid;
       border-color: grey transparent transparent transparent; }
+
+#tabbed-content {
+  background: #b1b1d3;
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: 200ms;
+  -o-transition: 200ms;
+  transition: 200ms;
+  -webkit-transition-property: top, -webkit-box-shadow;
+  transition-property: top, -webkit-box-shadow;
+  -o-transition-property: box-shadow, top;
+  transition-property: box-shadow, top;
+  transition-property: box-shadow, top, -webkit-box-shadow; }
+  #tabbed-content .tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 230px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    #tabbed-content .tabs li {
+      list-style: none;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 5px;
+      margin: 0 5px 5px -20px;
+      padding: 5px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      #tabbed-content .tabs li.active {
+        -webkit-box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.4);
+        box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.4); }
+  #tabbed-content .panel {
+    position: relative;
+    display: none;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 7px 15px;
+    margin: 0 20px 10px 15px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.4);
+    font-size: 14px; }
+    #tabbed-content .panel img {
+      width: 60px; }
+    #tabbed-content .panel.active {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+  #tabbed-content #about::before {
+    position: absolute;
+    content: '';
+    border-width: 12px;
+    border-style: solid;
+    border-color: transparent rgba(255, 255, 255, 0.6) transparent transparent;
+    left: -24px; }
+  #tabbed-content #contact::before {
+    position: absolute;
+    content: '';
+    border-width: 12px;
+    border-style: solid;
+    border-color: transparent rgba(255, 255, 255, 0.6) transparent transparent;
+    left: -24px;
+    top: 35px; }
